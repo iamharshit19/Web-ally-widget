@@ -1,0 +1,92 @@
+body.high-contrast {
+  
+  background-color: black;
+  color: white;
+}
+
+body.high-contrast a {
+  color: yellow;
+}
+
+body.high-contrast img {
+  filter: brightness(80%);
+}
+body.high-contrast .a11y-menu-panel {
+  background-color: #000 !important;
+  color: white !important;
+  border: 1px solid #888 !important;
+}
+body.high-contrast h2 {
+ color: white;
+}
+@font-face{
+  font-family: 'OpenDyslexic'; 
+  src: url('./assets/OpenDyslexic-Regular.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  
+}
+.readable-font * { 
+  font-family: 'OpenDyslexic', Arial, sans-serif ;
+}
+.high-spacing * {
+  line-height: 1.6 ;
+  letter-spacing: 0.06em ;
+  word-spacing: 0.18em ;
+}
+.highlight-links a {
+  background-color: yellow;
+  text-decoration: underline;
+}
+body.dark-mode:not(.high-contrast):not(.color-blind-mode) {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode .a11y-menu-panel {
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #444;
+  
+}
+body.dark-mode .a11y-menu-panel h2 {
+  color: white;
+}
+
+body.dark-mode:not(.high-contrast):not(.color-blind-mode) a {
+  color: #82aaff;
+}
+body.dark-mode button {
+  background-color: #333;
+  color: #f1f1f1;
+}
+body.color-blind-mode {
+  --cb-background: #f4f4f4;
+  --cb-text: #222;
+  --cb-accent: #3366cc; /* Blue-ish, color-blind safe */
+  --cb-link: #1b73ba;
+
+  background-color: var(--cb-background);
+  color: var(--cb-text);
+}
+
+body.color-blind-mode .a11y-menu-panel {
+  background-color: #eaeaea;
+  color: var(--cb-text);
+}
+
+body.color-blind-mode a {
+  color: var(--cb-link);
+  text-decoration: underline;
+}
+
+body.color-blind-mode button {
+  background-color: var(--cb-accent);
+  color: #fff;
+  border: none;
+}
+
+body.color-blind-mode input,
+body.color-blind-mode label {
+  color: var(--cb-text);
+}
