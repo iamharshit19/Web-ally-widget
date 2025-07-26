@@ -82,4 +82,4 @@ Infrastructure is ready for adding ARIA live regions to notify screen readers wh
     ├── README.md
     └── package.json
 ## Screenshot
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9f9a66bc-2d49-4b14-9c74-cb15848d72ed" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ed8731b7-d3f4-484f-b0f6-028ac86ab3df" />
