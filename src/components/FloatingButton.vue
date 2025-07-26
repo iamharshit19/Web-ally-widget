@@ -1,6 +1,6 @@
 <template>
   <button class="a11y-floating-button" @click="$emit('toggle-menu')" aria-label="Accessibility Settings">
-    <span class="a11y-icon" aria-hidden="true">♿</span>
+    <span class="a11y-icon" aria-hidden="true">⚙️</span>
     <span class="a11y-sr-only">Accessibility Settings</span>
   </button>
 </template>
