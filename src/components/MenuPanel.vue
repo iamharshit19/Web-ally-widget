@@ -86,6 +86,33 @@ onMounted(()=>{
     document.body.classList.add('dark-mode')
   }
 })
+function resetAccessibilitySettings() {
+
+  document.body.classList.remove(
+    'high-contrast',
+    'highlight-links',
+    'readable-font',
+    'high-spacing',
+    'color-blind-mode',
+    'dark-mode'
+  );
+
+
+  document.documentElement.style.fontSize = '1rem';
+
+
+  localStorage.removeItem('spacingEnabled');
+  localStorage.removeItem('fontSizeValue');
+  localStorage.removeItem('colorBlindMode');
+  localStorage.removeItem('darkMode');
+
+
+  isDarkMode.value = false;
+  isHighSpacing.value = false;
+  isColorBlindMode.value = false;
+  sliderValue.value = 100;
+  inputValue.value = '100';
+}
 </script>
 
 <template>
@@ -138,13 +165,18 @@ onMounted(()=>{
         <button @click="toggleHighlightLinks" :class="[isDarkMode ? 'dark-active' : 'light-active-link', isColorBlindMode ? 'cb-mode' : '']">
           Highlight Links
         </button>
-        <button @click="toggleSpacing">
+        <div><button @click="toggleSpacing" style="width: 80%;">
                 {{ isHighSpacing ? 'Reset Spacing' : 'Increase Spacing' }}
         </button>
-
-
-
+<br>
+  <button @click="resetAccessibilitySettings" class="reset-btn" aria-label="Reset All Settings">
+  ⟳
+</button>
+</div>
+        
    </div>
+ 
+
 </template>
 
 <style scoped>
@@ -216,19 +248,38 @@ button{
 }
 
 .cb-mode {
-  background-color: var(--cb-accent) !important;
-  color: #fff !important;
+  background-color: var(--cb-accent) ;
+  color: #fff ;
 }
 
   
 #font{
-  font-family: 'OpenDyslexic', Arial, sans-serif !important;
+  font-family: 'OpenDyslexic', Arial, sans-serif ;
 }
 #btn1{
   display: flex;
   gap: 10px;
   
 }
+.reset-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  background-color: inherit;
+  border: none;
+  border-radius: 50%;
+  width: 15%;
+  height: 40px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+}
+
+.reset-btn:hover {
+  background-color: #ddd;
+}
+
 
 </style>
 

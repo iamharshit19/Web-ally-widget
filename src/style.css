@@ -12,9 +12,9 @@ body.high-contrast img {
   filter: brightness(80%);
 }
 body.high-contrast .a11y-menu-panel {
-  background-color: #000 !important;
-  color: white !important;
-  border: 1px solid #888 !important;
+  background-color: #000 ;
+  color: white ;
+  border: 1px solid #888 ;
 }
 body.high-contrast h2 {
  color: white;
@@ -63,7 +63,7 @@ body.dark-mode button {
 body.color-blind-mode {
   --cb-background: #f4f4f4;
   --cb-text: #222;
-  --cb-accent: #3366cc; /* Blue-ish, color-blind safe */
+  --cb-accent: #3366cc;
   --cb-link: #1b73ba;
 
   background-color: var(--cb-background);
